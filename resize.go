@@ -422,14 +422,26 @@ func calculateCrop(inWidth, inHeight, outWidth, outHeight int, gravity Gravity) 
 	switch gravity {
 	case NORTH:
 		left = (inWidth - outWidth + 1) / 2
+	case NORTHEAST:
+		left = inWidth - outWidth
+		top = 0
 	case EAST:
 		left = inWidth - outWidth
 		top = (inHeight - outHeight + 1) / 2
+	case SOUTHEAST:
+		left = inWidth - outWidth
+		top = inHeight - outHeight
 	case SOUTH:
 		left = (inWidth - outWidth + 1) / 2
 		top = inHeight - outHeight
+	case SOUTHWEST:
+		left = 0
+		top = inHeight - outHeight
 	case WEST:
 		top = (inHeight - outHeight + 1) / 2
+	case NORTHWEST:
+		left = 0
+		top = 0
 	default:
 		left = (inWidth - outWidth + 1) / 2
 		top = (inHeight - outHeight + 1) / 2

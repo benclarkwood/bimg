@@ -16,9 +16,13 @@ type Gravity int
 const (
 	CENTRE Gravity = iota
 	NORTH
+	NORTHEAST
 	EAST
+	SOUTHEAST
 	SOUTH
+	SOUTHWEST
 	WEST
+	NORTHWEST
 )
 
 type Interpolator int
